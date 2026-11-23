@@ -12,8 +12,8 @@ html,body{height:100%;overflow:hidden;background:var(--bg1);font-family:'Cormora
 .bg2{position:absolute;inset:0;opacity:0;transition:opacity 3.5s ease;background:radial-gradient(100% 80% at 50% 40%,#f3ece3,#e3e9ec 60%,#d6dfe5)}
 .tap .bg2{opacity:1}
 .intro{position:absolute;left:0;right:0;top:5vh;text-align:center;padding:0 24px;transition:opacity 1s,transform 1.2s;z-index:3;pointer-events:none}
-.intro h1{font-weight:500;font-size:clamp(28px,8vw,44px);letter-spacing:.01em}
-.intro p{font-style:italic;font-size:clamp(18px,4.6vw,22px);margin-top:6px;opacity:.85}
+.intro h1{font-weight:500;font-size:clamp(22px,6vw,32px);letter-spacing:.01em}
+.intro p{font-style:italic;font-size:clamp(14px,3.6vw,17px);margin-top:6px;opacity:.85}
 .tap .intro{opacity:0;transform:translateY(-16px)}
 .hint{position:absolute;left:0;right:0;bottom:12vh;text-align:center;font-size:16px;font-style:italic;opacity:.65;transition:opacity .8s;animation:pulse 3s ease-in-out infinite;pointer-events:none}
 .tap .hint{opacity:0;animation:none}
@@ -55,13 +55,13 @@ html,body{height:100%;overflow:hidden;background:var(--bg1);font-family:'Cormora
 .open .seal{opacity:0}
 .paper{position:absolute;left:50%;top:50%;width:min(92vw,440px);max-height:82vh;overflow-y:auto;overscroll-behavior:contain;background:#fff;border-radius:18px;padding:34px 28px 26px;z-index:6;opacity:0;pointer-events:none;transform:translate(-50%,-50%) translateY(12%) scale(.7,.2);transform-origin:50% 40%;transition:transform 2.6s cubic-bezier(.3,.9,.3,1),opacity .4s ease;box-shadow:0 24px 60px rgba(80,95,110,.25),0 2px 6px rgba(0,0,0,.06);background-image:repeating-linear-gradient(transparent 0 35px,rgba(184,216,234,.28) 35px 36px)}
 .read .paper{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}
-.paper h2{font-family:'Caveat',cursive;font-weight:600;font-size:clamp(30px,8vw,38px);margin-bottom:12px;color:#3f5a6b}
-.paper p{font-family:'Caveat',cursive;font-weight:500;font-size:clamp(23px,5.9vw,27px);line-height:1.36;margin-bottom:14px;white-space:pre-line;opacity:0;transform:translateY(10px);transition:opacity 2.4s ease,transform 2.4s ease}
+.paper h2{font-family:'Caveat',cursive;font-weight:600;font-size:clamp(24px,6.2vw,29px);margin-bottom:10px;color:#3f5a6b}
+.paper p{font-family:'Caveat',cursive;font-weight:500;font-size:clamp(18px,4.6vw,21px);line-height:1.34;margin-bottom:11px;white-space:pre-line;opacity:0;transform:translateY(10px);transition:opacity 2.4s ease,transform 2.4s ease}
 .paper .sig{text-align:right;margin-top:6px;color:#3f5a6b}
 .paper h2{opacity:0;transform:translateY(10px);transition:opacity 2s,transform 2s}
 .show{opacity:1!important;transform:none!important}
 .mini{display:block;margin:12px auto 0;width:92px}
-.cap{text-align:center;font-style:italic;font-size:15px;opacity:.7;margin-top:2px}
+.cap{text-align:center;font-style:italic;font-size:13px;opacity:.7;margin-top:2px}
 .rp{position:absolute;right:calc(14px + env(safe-area-inset-right,0px));top:calc(14px + env(safe-area-inset-top,0px));width:36px;height:36px;border-radius:50%;border:1px solid rgba(80,100,115,.25);background:rgba(255,255,255,.6);display:grid;place-items:center;cursor:pointer;z-index:9;opacity:0;pointer-events:none;transition:opacity .8s;color:var(--ink)}
 .tap .rp{opacity:.6;pointer-events:auto}
 .rp:active svg{transform:rotate(-180deg)}.rp svg{transition:transform .5s}
@@ -84,8 +84,8 @@ html,body{height:100%;overflow:hidden;background:var(--bg1);font-family:'Cormora
 .paper::-webkit-scrollbar-thumb{min-height:34px;border:2px solid #fff;border-radius:12px;background:#B8D8EA url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M12 21C5 16 3 12 3 9a4.5 4.5 0 0 1 9-1.5A4.5 4.5 0 0 1 21 9c0 3-2 7-9 12z'/%3E%3C/svg%3E") center/9px no-repeat}
 .more{position:sticky;bottom:6px;width:34px;height:34px;margin:0 0 0 auto;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(80,110,130,.25);display:grid;place-items:center;color:#8FBBD6;font-size:18px;animation:bob 1.6s ease-in-out infinite;pointer-events:none;transition:opacity .4s}
 .more.gone{opacity:0}@keyframes bob{50%{transform:translateY(-5px)}}
-.ps{font-family:'Caveat',cursive;font-size:22px;text-align:center;color:#3f5a6b;margin-top:10px}
-.hb{display:block;margin:4px auto 0;border:0;background:none;font-size:28px;color:#8FBBD6;cursor:pointer;animation:beat 1.6s ease-in-out infinite}
+.ps{font-family:'Caveat',cursive;font-size:18px;text-align:center;color:#3f5a6b;margin-top:10px}
+.hb{display:block;margin:4px auto 0;border:0;background:none;font-size:22px;color:#8FBBD6;cursor:pointer;animation:beat 1.6s ease-in-out infinite}
 @keyframes beat{50%{transform:scale(1.2)}}
 .ht{position:absolute;left:var(--l);bottom:-30px;font-size:var(--z);color:#8FBBD6;opacity:0;pointer-events:none;z-index:7;animation:rise var(--t) ease-out forwards}
 @keyframes rise{10%{opacity:.85}100%{transform:translateY(-95vh) translateX(var(--dx)) rotate(20deg);opacity:0}}
@@ -110,7 +110,7 @@ html,body{height:100%;overflow:hidden;background:var(--bg1);font-family:'Cormora
 .nav button{width:36px;height:36px;border-radius:50%;border:1px solid rgba(80,100,115,.25);background:rgba(255,255,255,.6);display:grid;place-items:center;cursor:pointer;color:var(--ink);opacity:.65}
 .nav button:active{transform:scale(.92)}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}.petal{display:none}}
-.rl{position:absolute;left:50%;bottom:calc(2.2vh + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:9;display:flex;align-items:center;gap:9px;padding:13px 26px;border-radius:999px;border:1px solid rgba(143,187,214,.7);background:linear-gradient(135deg,#d3e8f4,#B8D8EA);color:#3f5566;font:inherit;font-size:17px;cursor:pointer;white-space:nowrap;box-shadow:0 6px 18px rgba(120,160,185,.35);overflow:hidden;opacity:0;animation:rlIn 1.2s cubic-bezier(.2,.8,.2,1) 2.5s forwards,rlFloat 3.6s ease-in-out 3.7s infinite;transition:opacity .6s}
+.rl{position:absolute;left:50%;bottom:calc(2.2vh + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:9;display:flex;align-items:center;gap:7px;padding:10px 20px;border-radius:999px;border:1px solid rgba(143,187,214,.7);background:linear-gradient(135deg,#d3e8f4,#B8D8EA);color:#3f5566;font:inherit;font-size:14px;cursor:pointer;white-space:nowrap;box-shadow:0 6px 18px rgba(120,160,185,.35);overflow:hidden;opacity:0;animation:rlIn 1.2s cubic-bezier(.2,.8,.2,1) 2.5s forwards,rlFloat 3.6s ease-in-out 3.7s infinite;transition:opacity .6s}
 .rl::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);animation:rlShine 4s ease-in-out 4s infinite}
 .rl .rh{display:inline-block;animation:rlBeat 1.6s ease-in-out infinite}
 .rl:active{transform:translateX(-50%) scale(.95)}
@@ -119,14 +119,30 @@ html,body{height:100%;overflow:hidden;background:var(--bg1);font-family:'Cormora
 @keyframes rlFloat{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-6px)}}
 @keyframes rlShine{0%,60%{left:-60%}100%{left:130%}}
 @keyframes rlBeat{0%,100%{transform:scale(1)}15%{transform:scale(1.3)}30%{transform:scale(1)}45%{transform:scale(1.2)}}
+#splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:radial-gradient(120% 90% at 50% 30%,#fff,#f6f9fb 55%,#e1ebf1);transition:opacity 1.2s ease,visibility 1.2s}
+#splash.out{opacity:0;visibility:hidden;pointer-events:none}
+body.splash-on #app *,body.splash-on #app *::before,body.splash-on #app *::after{animation-play-state:paused!important}
+#splash{display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+#splash .sn{display:flex;justify-content:center;gap:.14em;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(34px,10vw,52px);color:#3f5a6b}
+#splash .sl{display:inline-block;opacity:0;transform:translateY(22px) scale(.7);filter:blur(8px);animation:slIn 1.3s cubic-bezier(.2,.8,.2,1) calc(.4s + var(--i)*.2s) forwards,slFloat 4s ease-in-out calc(2.4s + var(--i)*.25s) infinite}
+@keyframes slIn{to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes slFloat{0%,100%{transform:translateY(0);text-shadow:0 0 0 rgba(143,187,214,0)}50%{transform:translateY(-6px);text-shadow:0 6px 16px rgba(143,187,214,.8)}}
+#splash .sline{height:1px;width:0;margin:14px auto 0;background:linear-gradient(90deg,transparent,#8FBBD6,transparent);animation:slLine 1.6s ease-out 1.8s forwards}
+@keyframes slLine{to{width:min(60vw,240px)}}
+#splash .so{margin-top:30px;padding:9px 30px;border-radius:999px;border:1px solid rgba(143,187,214,.8);background:linear-gradient(135deg,#d3e8f4,#B8D8EA);color:#3f5a6b;font:inherit;font-size:15px;letter-spacing:.12em;cursor:pointer;opacity:0;transform:translateY(10px);animation:soIn 1s ease-out 2.6s forwards,soPulse 2.6s ease-in-out 3.6s infinite}
+#splash .so:active{transform:scale(.94)}
+@keyframes soIn{to{opacity:1;transform:none}}
+@keyframes soPulse{0%,100%{box-shadow:0 0 0 0 rgba(143,187,214,.55)}50%{box-shadow:0 0 0 12px rgba(143,187,214,0)}}
+#splash .sh{position:absolute;bottom:-20px;color:#8FBBD6;opacity:0;pointer-events:none;animation:shUp var(--t) ease-in infinite var(--dl)}
+@keyframes shUp{0%{transform:translateY(0);opacity:0}15%{opacity:.7}100%{transform:translateY(-105vh) translateX(var(--dx));opacity:0}}
 </style></head>
-<body>
+<body class="splash-on">
+<div id="splash"><i class="sh" style="left:12%;font-size:14px;--t:9s;--dl:0.5s;--dx:20px">♡</i><i class="sh" style="left:30%;font-size:18px;--t:11s;--dl:2.5s;--dx:-25px">♡</i><i class="sh" style="left:52%;font-size:12px;--t:8s;--dl:1.2s;--dx:15px">♡</i><i class="sh" style="left:70%;font-size:20px;--t:12s;--dl:3.5s;--dx:-20px">♡</i><i class="sh" style="left:88%;font-size:15px;--t:10s;--dl:0.2s;--dx:25px">♡</i><div class="sn" aria-label="CRIZAN"><span class="sl" style="--i:0">C</span><span class="sl" style="--i:1">R</span><span class="sl" style="--i:2">I</span><span class="sl" style="--i:3">Z</span><span class="sl" style="--i:4">A</span><span class="sl" style="--i:5">N</span></div><div class="sline"></div><button class="so" id="so">Open</button></div>
 <div id="app">
 <div class="bg2"></div>
 <div class="intro"><h1 id="t_h"></h1><p id="t_s"></p></div>
 <button class="bouq" id="bq" aria-label="Open your surprise">
 <svg class="fl" viewBox="0 0 320 460" id="svg"></svg></button>
-<div class="hint" id="t_i"></div>
 <button class="rl" id="rl"><span class="rh">♡</span><span>Read the letter</span></button>
 <div class="folder" id="fd">
 <div class="k back"></div><div class="flap k"></div>
@@ -145,7 +161,7 @@ html,body{height:100%;overflow:hidden;background:var(--bg1);font-family:'Cormora
 
 
 <script>
-var D={h:"A Little Something for You ♡",s:"",i:"Tap the bouquet to see your surprise.",lh:"Hello, Crizan!",
+var D={h:"A Little Something for You ♡",s:"",i:"",lh:"Hello, Crizan!",
 m:"So yeah, here we are again HAHAHA. This is actually the second time I've made this much effort to create something for you. I don't know, I just find it nice to make something special for someone, especially when that person is you. And since alam naman natin na medyo malayo tayo sa isa't isa, I thought of making you a digital bouquet instead. I know it's not the same as receiving actual flowers, but I wanted to give you something that I personally made, something that has a little piece of my time, effort, and thought in it.\n\nTo be honest, this almost took me an entire day to finish. So yes, I kind of lied when I said I wasn't busy HAHAHA. I was actually working on this whenever I had free time. Sometimes, I would stop for a while, think of what else I could add, change a few things, and then continue again. There were moments when I wasn't even sure what design would look nice, but I kept trying because I wanted everything to look presentable and pleasing to you. I wanted it to be something that you would genuinely appreciate, even if it's just a simple digital gift.\n\nBut please, don't ever think that you're becoming a burden or that you're disturbing me just because I'm spending time making this, okay? You don't have to feel sorry or guilty about it. It's completely fine, really. I actually enjoy talking to you while doing these little projects. Hindi naman sayang yung oras ko, because I get to do something I enjoy while also having someone to talk to. Sometimes, our conversations even give me random ideas about what else I could create or what little surprises I could prepare for you. So technically, you're also part of the inspiration behind this HAHAHA.\n\nI know some people might think, \"It's just a digital bouquet, what's so special about that?\" But for me, it's not really about how expensive, big, or complicated a gift is. It's more about the thought behind it. I could have simply sent you a picture of flowers from the internet, but I wanted to make my own version instead. I wanted to put effort into it, even if it meant spending hours figuring out the little details. At least I could say that I made this myself, and it wasn't just something I randomly picked and sent to you.\n\nAnd honestly, I wish distance wasn't always a thing. It would be nice to personally give you flowers, see your reaction, and watch you receive something that I prepared for you. Maybe someday, I could do that instead of just sending you something digitally. But for now, this is what I can offer, and I hope it still makes you feel a little special. Kahit malayo tayo, I still want to find little ways to show my appreciation.\n\nAlso, I hope you understand that you don't need to give anything back just because I made this for you. Please don't feel pressured to match my efforts or do something equally special. I'm not expecting anything in return. I just genuinely enjoy doing these things, especially when I know that they might bring a little happiness to someone. I don't want my efforts to become an obligation for you. I want them to remain something freely given, without expecting you to do the same.\n\nI also hope you know that you don't have to be perfect or do anything extraordinary just to be appreciated. Sometimes, simply being yourself and allowing me to know you little by little is already something I appreciate. I don't want to rush anything. I'd rather enjoy the little moments, the random conversations, the unexpected laughs, and even the simplest things we get to share with each other.\n\nAnyway, I think I've written quite a lot already HAHAHA. I just wanted to explain why I made this and let you know that even though it looks simple, I really put my time and effort into it. I hope you'll appreciate every little detail, because I made them with you in mind.\n\nSo here's your digital bouquet, Crizan! A little collection of flowers that I unfortunately cannot hand to you personally just yet. I hope these flowers remind you that even from a distance, someone can still think of you and find ways to make you smile.\n\nI hope you like it, po. And please don't forget to take care of yourself, get enough rest, and don't be too hard on yourself. You deserve little surprises and good things, too. Thank you for giving me another reason to be creative and for making my free time a little more meaningful.\n\nThat's all for now. I hope this little surprise makes your day, even just a bit. You might be receiving a digital bouquet, but the effort, time, and thought behind it are definitely real. :))",
 sig:"With love, always ♡",c:"for you",ps:"P.S. Smile for me, okay? It looks so good on you ♡"};
 var C=Object.assign({},D),$=function(i){return document.getElementById(i)};
@@ -177,7 +193,7 @@ $('svg').innerHTML=s;lock();
 $('mini').innerHTML='<defs><radialGradient id="mB" cx=".4" cy=".35"><stop offset="0" stop-color="#E4F1F8"/><stop offset="1" stop-color="#9CC6DE"/></radialGradient></defs><path d="M46 56C46 40 46 34 46 26M46 44C32 40 26 30 20 24M46 40C60 36 68 28 74 20" stroke="'+SD+'" fill="none" stroke-width="1.5"/><ellipse cx="22" cy="26" rx="8" ry="4" fill="'+S+'" stroke="'+SD+'" transform="rotate(-40 22 26)"/><ellipse cx="72" cy="22" rx="8" ry="4" fill="'+S+'" stroke="'+SD+'" transform="rotate(40 72 22)"/><g transform="translate(46 18)">'+rose(15,'mB',BD,0)+'</g>'}
 build();
 var LT;function lock(){var b=$('bq'),a=$('app');b.disabled=true;a.classList.add('wait');clearTimeout(LT);LT=setTimeout(function(){b.disabled=false;a.classList.remove('wait')},matchMedia('(prefers-reduced-motion:reduce)').matches?100:11500)}
-function put(){$('t_h').textContent=C.h;$('t_s').textContent=C.s;$('t_i').textContent=C.i;$('t_lh').textContent=C.lh;$('t_c').textContent=C.c;$('t_ps').textContent=C.ps;
+function put(){$('t_h').textContent=C.h;$('t_s').textContent=C.s;$('t_lh').textContent=C.lh;$('t_c').textContent=C.c;$('t_ps').textContent=C.ps;
 var b=$('body');b.innerHTML='';C.m.split(/\n\s*\n/).forEach(function(x){var p=document.createElement('p');p.textContent=x;b.appendChild(p)});
 var g=document.createElement('p');g.className='sig';g.textContent=C.sig;b.appendChild(g)}
 put();
@@ -211,5 +227,6 @@ new MutationObserver(function(){var f=$('fd');['down','open','slide'].forEach(fu
 $('bq').onclick=run;
 $('rp').onclick=function(){if(app.classList.contains('tap')){reset();later(run,700)}else{build()}};
 
+$('so').onclick=function(){document.body.classList.remove('splash-on');$('splash').classList.add('out');setTimeout(function(){var e=$('splash');if(e)e.remove()},1600)};
 </script>
 </body></html>
